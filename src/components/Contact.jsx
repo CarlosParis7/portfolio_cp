@@ -7,6 +7,7 @@ const WA_NUMBER = '50764535848';
 const WA_MESSAGE = encodeURIComponent('Hola Carlos, vi tu portafolio y me interesa contactarte.');
 const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
 const EMAIL = 'carlosparis826@gmail.com';
+const GMAIL_URL = `https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=Contacto%20desde%20tu%20portafolio`;
 
 export default function Contact() {
   const { t } = useAppContext();
@@ -69,7 +70,9 @@ export default function Contact() {
 
           {/* Email secondary */}
           <a 
-            href={`mailto:${EMAIL}`}
+            href={GMAIL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: 'inline-flex', 
               alignItems: 'center', 
